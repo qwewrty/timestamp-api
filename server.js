@@ -4,8 +4,10 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 
 app.set('port', (process.env.PORT || 5000))
 
+app.use(express.static('.'));
+
 app.get('/',function (req,res) {
-    res.send("Hello!");
+    res.send('index.html');
 })
 app.get('/:time', function(req,res) {
     var date;
