@@ -11,8 +11,5 @@
   },
   "engines": {
     "node": "4.6.1"
-  },
-  "devDependencies": {
-    "dotenv": "^2.0.0"
   }
 }
