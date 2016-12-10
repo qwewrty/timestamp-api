@@ -2,6 +2,8 @@ var express = require("express");
 var app = express();
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+app.set('port', (process.env.PORT || 5000))
+
 app.get('/',function (req,res) {
     res.send("Hello!");
 })
@@ -19,6 +21,6 @@ app.get('/:time', function(req,res) {
     };
     res.send(JSON.stringify(obj));
 })
-app.listen(80, function(){
-    console.log('listening on 8080:')
+app.listen(app.get('port'), function(){
+    console.log('listening on :'+ app.get('port'))
 })
